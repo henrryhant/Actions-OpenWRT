@@ -68,7 +68,11 @@ jobs:
       run: git clone $REPO_URL -b $REPO_BRANCH openwrt
 
     - name: Clone own packages
-      run: git clone $OWN_PACKAGE_URL ./openwrt/package/greenice
+      run: |
+        git clone $OWN_PACKAGE_URL ./openwrt/package/greenice
+        cp -r ./openwrt/package/greenice/ucl ./openwrt/tools/
+        cp -r ./openwrt/package/greenice/upx ./openwrt/tools/
+        cd openwrt && sed -i '30 a\tools-y += ucl upx' ./tools/Makefile
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
