@@ -3,6 +3,12 @@ mv -r ./package/greenice/ucl ./tools/
 mv -r ./package/greenice/upx ./tools/
 sed -i '30 a\tools-y += ucl upx' ./tools/Makefile
 
+##此处wireguard更新仅针对openwrt-19.07版本
+[ -e "./package/network/services/wireguard" ] && rm -rf ./package/network/services/wireguard
+[ -e "./package/network/utils/wireguard-tools" ] && rm -rf ./package/network/utils/wireguard-tools
+mv -r ./pacakge/greenice/wireguard ./package/network/services/
+mv -r ./pacakge/greenice/wireguard-tools ./package/network/utils/
+
 ##修改LAN地址、时区
 sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generate
 sed -i "s/timezone='UTC'/timezone='CTS-8'/g" package/base-files/files/bin/config_generate
