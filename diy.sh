@@ -1,13 +1,13 @@
 #!/bin/bash
-mv -r ./package/greenice/ucl ./tools/
-mv -r ./package/greenice/upx ./tools/
+mv ./package/greenice/ucl ./tools/
+mv ./package/greenice/upx ./tools/
 sed -i '30 a\tools-y += ucl upx' ./tools/Makefile
 
 ##此处wireguard更新仅针对openwrt-19.07版本
 [ -e "./package/network/services/wireguard" ] && rm -rf ./package/network/services/wireguard
 [ -e "./package/network/utils/wireguard-tools" ] && rm -rf ./package/network/utils/wireguard-tools
-mv ./pacakge/greenice/wireguard ./package/network/services/
-mv ./pacakge/greenice/wireguard-tools ./package/network/utils/
+mv ./package/greenice/wireguard ./package/network/services/
+mv ./package/greenice/wireguard-tools ./package/network/utils/
 
 ##修改LAN地址、时区
 sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generate
