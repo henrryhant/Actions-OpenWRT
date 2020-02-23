@@ -25,17 +25,17 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: openwrt-19.07
   OWN_PACKAGE_URL: https://github.com/greenice897/gipackages
-  CONFIG_FILE: k3.config
-  DIY_SH: diy.sh
+  CONFIG_FILE: b70.config
+  DIY_SH: diy-b70.sh
   FREE_UP_DISK: false
 #  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
-  MOD_PATH: ./target/linux/bcm53xx/image
-  MOD_FILE: Makefile
+  MOD_PATH: ./target/linux/ramips/image
+  MOD_FILE: mt7621.mk
   KEYWORDS_FRONT: TARGET_DEVICES
-  KEYWORDS_BACK: TARGET_DEVICES += phicomm-k3
+  KEYWORDS_BACK: TARGET_DEVICES += hiwifi_hc5962
 
 jobs:
   build:
