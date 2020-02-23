@@ -35,7 +35,7 @@ env:
   MOD_PATH: ./target/linux/ramips/image
   MOD_FILE: mt7621.mk
   KEYWORDS_FRONT: TARGET_DEVICES
-  KEYWORDS_BACK: TARGET_DEVICES += hiwifi_hc5962
+  KEYWORDS_BACK: TARGET_DEVICES += hc5962
 
 jobs:
   build:
