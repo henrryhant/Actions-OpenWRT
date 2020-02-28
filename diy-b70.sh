@@ -3,6 +3,12 @@ mv ./package/greenice/ucl ./tools/
 mv ./package/greenice/upx ./tools/
 sed -i '30 a\tools-y += ucl upx' ./tools/Makefile
 
+##更换node版本v10
+rm -rf ./feeds/packages/lang/node*
+mkdir ../nodetmp
+git clone https://github.com/project-openwrt/openwrt-node-packages.git ../nodetmp
+mv ../nodetmp/node* ./feeds/packages/lang/
+
 ##此处wireguard更新仅针对openwrt-19.07版本
 [ -e "./package/network/services/wireguard" ] && rm -rf ./package/network/services/wireguard
 [ -e "./package/network/utils/wireguard-tools" ] && rm -rf ./package/network/utils/wireguard-tools
