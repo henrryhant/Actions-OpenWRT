@@ -97,7 +97,7 @@ jobs:
         make defconfig
 
     - name: SSH connection to Actions
-      uses: henrryhant/debugger-action@master
+      uses: cpopwrt/debugger-action@master
      if: env.SSH_ACTIONS == 'true'
 
     - name: Download package
