@@ -28,7 +28,7 @@ env:
   CONFIG_FILE: b70-master.config
   DIY_SH: diy-b70-master.sh
   FREE_UP_DISK: false
-  SSH_ACTIONS: false
+#  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
@@ -96,9 +96,9 @@ jobs:
         ../$DIY_SH
         make defconfig
 
-    - name: SSH connection to Actions
-      uses: cpopwrt/debugger-action@master
-     if: env.SSH_ACTIONS == 'true'
+#    - name: SSH connection to Actions
+#      uses: cpopwrt/debugger-action@master
+#     if: env.SSH_ACTIONS == 'true'
 
     - name: Download package
       id: package
