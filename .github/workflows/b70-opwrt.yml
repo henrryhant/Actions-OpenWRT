@@ -11,9 +11,9 @@ name: Build OpenWrt
 on:
 #  release:
 #    types: [published]
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - master
 #    paths:
 #      - '.config'
 #  schedule:
@@ -25,8 +25,8 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: openwrt-19.07
   OWN_PACKAGE_URL: https://github.com/greenice897/gipackages
-  CONFIG_FILE: b70.config
-  DIY_SH: diy-b70.sh
+  CONFIG_FILE: b70-1907.config
+  DIY_SH: diy-b70-1907.sh
   FREE_UP_DISK: false
 #  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
