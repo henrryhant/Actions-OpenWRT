@@ -26,6 +26,3 @@ rsync -rtv --delete package/greenice/adguardhome/ feeds/packages/net/adguardhome
 
 ########### 更新xray-core版本###########
 rsync -rtv --delete package/greenice/xray-core/ feeds/packages/net/xray-core
-
-########### 更新xray-core版本###########
-rsync -rtv --delete package/greenice/dnsmasq/ package/network/services/dnsmasq
