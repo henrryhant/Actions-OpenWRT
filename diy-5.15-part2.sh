@@ -14,18 +14,18 @@
 sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generate
 
 ########### 设置密码为空（可选） ###########
-sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
+#sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 ########### 更新smartdns版本 ###########
-sed -i "/^PKG_VERSION:=/cPKG_VERSION:=1.2022.39" openwrt/feeds/packages/net/smartdns/Makefile
-sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=3a1ba733860c2e4620bbf81618fe8f556649bb93" openwrt/feeds/packages/net/smartdns/Makefile
-sed -i "s/PKG_MIRROR_HASH/#PKG_MIRROR_HASH/" openwrt/feeds/packages/net/smartdns/Makefile
+sed -i "/^PKG_VERSION:=/cPKG_VERSION:=1.2022.39" feeds/packages/net/smartdns/Makefile
+sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=3a1ba733860c2e4620bbf81618fe8f556649bb93" feeds/packages/net/smartdns/Makefile
+sed -i "s/PKG_MIRROR_HASH/#PKG_MIRROR_HASH/" feeds/packages/net/smartdns/Makefile
 
 ########### 更新adguardhome版本###########
-rsync -rtv --delete openwrt/package/greenice/adguardhome/ openwrt/feeds/packages/net/adguardhome
+rsync -rtv --delete package/greenice/adguardhome/ feeds/packages/net/adguardhome
 
 ########### 更新xray-core版本###########
-rsync -rtv --delete openwrt/package/greenice/xray-core/ openwrt/feeds/packages/net/xray-core
+rsync -rtv --delete package/greenice/xray-core/ feeds/packages/net/xray-core
 
 ########### 更新xray-core版本###########
-rsync -rtv --delete openwrt/package/greenice/dnsmasq/ openwrt/package/network/services/dnsmasq
+rsync -rtv --delete package/greenice/dnsmasq/ package/network/services/dnsmasq
