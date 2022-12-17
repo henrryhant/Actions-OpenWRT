@@ -67,6 +67,19 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
+    - name: luci-theme-argon install
+      run: |
+       cd openwrt
+       cd package/greenice
+       rm -rf luci-theme-argon
+       git clone https://github.com/jerrykuku/luci-theme-argon.git
+       
+    - name: luci-app-argon-config install
+      run: |
+       cd openwrt
+       cd package/greenice
+       git clone https://github.com/jerrykuku/luci-app-argon-config.git
+
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
@@ -157,7 +170,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
+        echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
         touch release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
