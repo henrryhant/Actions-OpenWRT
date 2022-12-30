@@ -18,7 +18,7 @@ sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generat
 
 ########### 更新smartdns版本 ###########
 sed -i "/^PKG_VERSION:=/cPKG_VERSION:=1.2022.39" feeds/packages/net/smartdns/Makefile
-sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=3a1ba733860c2e4620bbf81618fe8f556649bb93" feeds/packages/net/smartdns/Makefile
+sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=dd9cf62d100ed4ff8c464e8cd5f5f4e8a672a017" feeds/packages/net/smartdns/Makefile
 sed -i "s/PKG_MIRROR_HASH/#PKG_MIRROR_HASH/" feeds/packages/net/smartdns/Makefile
 
 ########### 更新adguardhome版本###########
