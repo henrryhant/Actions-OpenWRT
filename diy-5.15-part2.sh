@@ -17,8 +17,8 @@ sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generat
 #sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 ########### 更新smartdns版本 ###########
-sed -i "/^PKG_VERSION:=/cPKG_VERSION:=1.2022.39" feeds/packages/net/smartdns/Makefile
-sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=dd9cf62d100ed4ff8c464e8cd5f5f4e8a672a017" feeds/packages/net/smartdns/Makefile
+sed -i "/^PKG_VERSION:=/cPKG_VERSION:=1.2022.40" feeds/packages/net/smartdns/Makefile
+sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=98ce7fd38c6a72f24126d4eadbef8ef85ba60ee0" feeds/packages/net/smartdns/Makefile
 sed -i "s/PKG_MIRROR_HASH/#PKG_MIRROR_HASH/" feeds/packages/net/smartdns/Makefile
 
 ########### 更新adguardhome版本###########
