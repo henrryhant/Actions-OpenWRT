@@ -11,7 +11,7 @@
 #
 mkdir -p package/greenice
 git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/greenice/passwallpackages
-git clone -b luci-smartdns-new-version https://github.com/xiaorouji/openwrt-passwall.git package/greenice/luci-smartdns-new-version
+svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci-smartdns-new-version/luci-app-passwall package/greenice/luci-app-passwall
 svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/greenice/luci-app-openclash
 svn export https://github.com/greenice897/gipackages/trunk/ddns-scripts-dnspod package/greenice/ddns-scripts-dnspod
 svn export https://github.com/greenice897/gipackages/trunk/ddns-scripts_aliyun package/greenice/ddns-scripts_aliyun
