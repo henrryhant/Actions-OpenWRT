@@ -27,3 +27,4 @@ git clone https://github.com/pymumu/luci-app-smartdns.git feeds/luci/application
 
 ########### 更新xray-core版本###########
 rsync -rtv --delete package/greenice/passwallpackages/xray-core/ feeds/packages/net/xray-core
+rsync -rtv --delete package/greenice/passwallpackages/microsocks/ feeds/packages/net/microsocks
