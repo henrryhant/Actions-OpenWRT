@@ -17,11 +17,10 @@ svn export https://github.com/greenice897/gipackages/trunk/ddns-scripts-dnspod p
 svn export https://github.com/greenice897/gipackages/trunk/ddns-scripts_aliyun package/greenice/ddns-scripts_aliyun
 svn export https://github.com/greenice897/gipackages/trunk/luci-app-vlmcsd package/greenice/luci-app-vlmcsd
 svn export https://github.com/greenice897/gipackages/trunk/vlmcsd package/greenice/vlmcsd
+svn export https://github.com/greenice897/gipackages/trunk/luci-app-timecontrol package/greenice/luci-app-timecontrol
 # svn export https://github.com/greenice897/gipackages/trunk/luci-app-accesscontrol package/greenice/luci-app-accesscontrol
 svn export https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/r8125 package/greenice/r8125
 svn export https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/r8152 package/greenice/r8152
 svn export https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/r8168 package/greenice/r8168
 # svn export https://github.com/immortalwrt/immortalwrt/trunk/package/network/utils/fullconenat-nft package/greenice/fullconenat-nft
-# svn export https://github.com/greenice897/gipackages/trunk/luci-app-vlmcsd package/greenice/luci-app-vlmcsd
-# svn export https://github.com/greenice897/gipackages/trunk/vlmcsd package/greenice/vlmcsd
 exit 0
