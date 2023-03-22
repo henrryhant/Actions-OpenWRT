@@ -24,7 +24,7 @@ svn export https://github.com/greenice897/gipackages/trunk/omcproxy package/netw
 ########### 更新smartdns版本 ###########
 rm -rf feeds/packages/net/smartdns
 git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
-sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=aa6f6fd519592adb831b5c7a25583c574ddda2bf" feeds/packages/net/smartdns/Makefile
+sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=4f2867b7f446aebd891ca15e0793542b73589b77" feeds/packages/net/smartdns/Makefile
 rm -rf feeds/luci/applications/luci-app-smartdns
 git clone https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
 ########### 更新adguardhome版本###########
