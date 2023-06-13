@@ -15,7 +15,7 @@ sed -i 's/192.168.1.1/192.168.56.2/g' package/base-files/files/bin/config_genera
 
 ########### 设置密码为空（可选） ###########
 
-svn export https://github.com/immortalwrt/immortalwrt/trunk/package/network/config/netifd/patches package/network/config/netifd/patches
+# svn export https://github.com/immortalwrt/immortalwrt/trunk/package/network/config/netifd/patches package/network/config/netifd/patches
 
 ########### 更新smartdns版本 ###########
 rm -rf feeds/packages/net/smartdns
