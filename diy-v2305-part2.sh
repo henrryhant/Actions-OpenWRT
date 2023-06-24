@@ -17,8 +17,8 @@ sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generat
 
 # svn export https://github.com/immortalwrt/immortalwrt/trunk/package/network/config/netifd/patches package/network/config/netifd/patches
 
-# rm -rf package/network/services/omcproxy
-# svn export https://github.com/greenice897/gipackages/trunk/omcproxy package/network/services/omcproxy
+rm -rf package/network/services/omcproxy
+svn export https://github.com/greenice897/gipackages/trunk/omcproxy package/network/services/omcproxy
 
 ########### 更新smartdns版本 ###########
 rm -rf feeds/packages/net/smartdns
