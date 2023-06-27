@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build-x86-64-OpenWrt v2305rc1
+name: Build-x86-64-OpenWrt package
 
 on:
   repository_dispatch:
