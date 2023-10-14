@@ -23,6 +23,7 @@ svn export https://github.com/greenice897/gipackages/trunk/omcproxy package/netw
 rm -rf package/greenice/passwallpackages/sing-box
 rm -rf feeds/packages/net/sing-box
 svn export https://github.com/greenice897/gipackages/trunk/sing-box feeds/packages/net/sing-box
+svn export https://github.com/greenice897/gipackages/trunk/sing-box package/greenice/passwallpackages/sing-box
 
 ########### 更新smartdns版本 ###########
 rm -rf feeds/packages/net/smartdns
