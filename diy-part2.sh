@@ -20,6 +20,9 @@ sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generat
 
 rm -rf package/network/services/omcproxy
 svn export https://github.com/greenice897/gipackages/trunk/omcproxy package/network/services/omcproxy
+rm -rf package/greenice/passwallpackages/sing-box
+rm -rf feeds/packages/net/sing-box
+svn export https://github.com/greenice897/gipackages/trunk/sing-box feeds/packages/net/sing-box
 
 ########### 更新smartdns版本 ###########
 rm -rf feeds/packages/net/smartdns
@@ -36,6 +39,6 @@ sed -i "s/PKG_VERSION:=1.2023.42/PKG_VERSION:=1.2023.43/" feeds/luci/application
 ########### 更新xray-core版本###########
 rsync -rtv --delete package/greenice/passwallpackages/xray-core/ feeds/packages/net/xray-core
 rsync -rtv --delete package/greenice/passwallpackages/microsocks/ feeds/packages/net/microsocks
-rsync -rtv --delete package/greenice/passwallpackages/sing-box/ feeds/packages/net/sing-box
+# rsync -rtv --delete package/greenice/passwallpackages/sing-box/ feeds/packages/net/sing-box
 rsync -rtv --delete package/greenice/passwallpackages/v2ray-core/ feeds/packages/net/v2ray-core
 rsync -rtv --delete package/greenice/passwallpackages/v2ray-geodata/ feeds/packages/net/v2ray-geodata
