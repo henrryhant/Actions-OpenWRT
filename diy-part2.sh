@@ -33,7 +33,7 @@ sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=1ba6ee7cb98b5b6448bc2a2be318
 sed -i "s/PKG_MIRROR_HASH/# PKG_MIRROR_HASH/" feeds/packages/net/smartdns/Makefile
 rm -rf feeds/luci/applications/luci-app-smartdns
 git clone https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
-sed -i "s/PKG_VERSION:=1.2023.42/PKG_VERSION:=1.2023.43/" feeds/luci/applications/luci-app-smartdns/Makefile
+# sed -i "s/PKG_VERSION:=1.2023.42/PKG_VERSION:=1.2023.43/" feeds/luci/applications/luci-app-smartdns/Makefile
 ########### 更新adguardhome版本###########
 #rsync -rtv --delete package/greenice/adguardhome/ feeds/packages/net/adguardhome
 
