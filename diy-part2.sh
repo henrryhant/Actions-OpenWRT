@@ -18,6 +18,7 @@ sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generat
 
 # svn export https://github.com/immortalwrt/immortalwrt/trunk/package/network/config/netifd/patches package/network/config/netifd/patches
 
+rm -rf package/greenice/passwallpackages/gn
 rm -rf package/network/services/omcproxy
 rsync -rtv --delete package/greenice/omcproxy/ package/network/services/omcproxy
 rm package/greenice/omcproxy
