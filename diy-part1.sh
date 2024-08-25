@@ -12,7 +12,8 @@
 # mkdir -p package/greenice
 git clone https://github.com/greenice897/openwrtpackages.git package/greenice
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/greenice/passwallpackages
-git clone https://github.com/sbwml/package_kernel_r8125.git package/greenice/r8125
+git clone -b luci-smartdns-dev https://github.com/xiaorouji/openwrt-passwall.git package/greenice
+# git clone https://github.com/sbwml/package_kernel_r8125.git package/greenice/r8125
 # git clone https://github.com/destan19/OpenAppFilter.git package/greenice/OpenAppFilter
 # svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci-smartdns-dev/luci-app-passwall package/greenice/luci-app-passwall
 # svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/greenice/luci-app-openclash
