@@ -18,16 +18,16 @@ sed -i 's/192.168.1.1/192.168.9.1/g' package/base-files/files/bin/config_generat
 
 # svn export https://github.com/immortalwrt/immortalwrt/trunk/package/network/config/netifd/patches package/network/config/netifd/patches
 
-rm -rf package/greenice/passwallpackages/gn
-rm -rf package/greenice/passwallpackages/naiveproxy
+# rm -rf package/greenice/passwallpackages/gn
+# rm -rf package/greenice/passwallpackages/naiveproxy
 rm -rf package/network/services/omcproxy
 rsync -rtv --delete package/greenice/omcproxy/ package/network/services/omcproxy
 rm package/greenice/omcproxy
 # svn export https://github.com/greenice897/gipackages/trunk/omcproxy package/network/services/omcproxy
-rm -rf package/greenice/passwallpackages/sing-box
+# rm -rf package/greenice/passwallpackages/sing-box
 rm -rf feeds/packages/net/sing-box
-rsync -rtv --delete package/greenice/sing-box/ feeds/packages/net/sing-box
-rsync -rtv --delete package/greenice/sing-box/  package/greenice/passwallpackages/sing-box
+rsync -rtv --delete package/greenice/passwallpackages/sing-box feeds/packages/net/sing-box
+# rsync -rtv --delete package/greenice/sing-box/  package/greenice/passwallpackages/sing-box
 # svn export https://github.com/greenice897/gipackages/trunk/sing-box feeds/packages/net/sing-box
 # svn export https://github.com/greenice897/gipackages/trunk/sing-box package/greenice/passwallpackages/sing-box
 
@@ -35,7 +35,7 @@ rsync -rtv --delete package/greenice/sing-box/  package/greenice/passwallpackage
 rm -rf feeds/packages/net/smartdns
 git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
 sed -i "s/PKG_VERSION:=1.2024.45/PKG_VERSION:=1.2024.46/" feeds/packages/net/smartdns/Makefile
-sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=75649b623519dda99b772342bbbe625a45234864" feeds/packages/net/smartdns/Makefile
+sed -i "/^PKG_SOURCE_VERSION:=/cPKG_SOURCE_VERSION:=d248f6d1408d22ea8920f7036572ba3b6ae93674" feeds/packages/net/smartdns/Makefile
 sed -i "s/PKG_MIRROR_HASH/# PKG_MIRROR_HASH/" feeds/packages/net/smartdns/Makefile
 rm -rf feeds/luci/applications/luci-app-smartdns
 git clone https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
